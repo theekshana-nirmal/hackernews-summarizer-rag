@@ -1,2 +1,43 @@
-# hackernews-summarizer-rag
-A beginner RAG project that scrapes Hacker News, retrieves relevant chunks, and generates a summary paragraph using Google Gemini and LangChain in TypeScript.
+# Hacker News Summarizer RAG
+
+I built this project to learn how RAG (Retrieval-Augmented Generation) actually works. It pulls the front page of Hacker News, breaks the content into chunks, turns them into vectors, and then uses Google Gemini to write a summary of what's trending right now.
+
+Nothing fancy here. Just a straightforward pipeline to understand the core idea, give an LLM data it has never seen before and let it answer questions about it.
+
+## What it does
+
+- Scrapes the Hacker News front page
+- Splits the text into smaller chunks
+- Embeds each chunk into a vector using Gemini's embedding model
+- Stores everything in an in-memory vector store
+- Retrieves the most relevant chunks when asked a question
+- Passes them to Gemini to generate a summary
+
+## Built with
+
+- TypeScript
+- LangChain
+- Google Gemini
+- Cheerio
+
+## Running it yourself
+
+You need Node.js v18+ and a Gemini API key from https://aistudio.google.com/api-key.
+
+1. Clone the repo and install dependencies.
+
+```bash
+npm install
+```
+
+2. Create a `.env` file in the root.
+
+```
+GOOGLE_API_KEY=your_key_here
+```
+
+3. Run it.
+
+```bash
+npx ts-node index.ts
+```
