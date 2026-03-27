@@ -55,7 +55,7 @@ async function main() {
     });
 
     const ragChain = await createRetrievalChain({
-        retriever: vectorStore.asRetriever({k: 10}),
+        retriever: vectorStore.asRetriever({k: 3}),
         combineDocsChain
     });
 
