@@ -4,6 +4,10 @@ I built this project to learn how RAG (Retrieval-Augmented Generation) actually 
 
 Nothing fancy here. Just a straightforward pipeline to understand the core idea, give an LLM data it has never seen before and let it answer questions about it.
 
+## About Hacker News
+
+[Hacker News](https://news.ycombinator.com/) is a tech-focused social news site run by Y Combinator. The front page shows top-ranked stories submitted and voted on by the community. I used it as the data source here because it updates often and is easy to scrape.
+
 ## What it does
 
 - Scrapes the Hacker News front page
